@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ol>
+        <li>Create two new Components (manually or with CLI): WarningAlert and SuccessAlert</li>
+        <li>Output them beneath each other in the AppComponent</li>
+        <li>Output a warning or success message in the Components</li>
+        <li>Style the Components appropriately (maybe some red/ green text?)</li>
+      </ol>
+      <p>Use external or internal templates and styles!</p>
+      <p>Feel free to create more components, nest them into each other or play around with different types of
+        selectors!</p>
+      <hr>
+      <div class="wrapper">
+        <input type="radio" name="point" id="alert1">
+        <input type="radio" name="point" id="alert2">
+        <div class="controls">
+          <label for="alert1" class="btn btn-success">Success</label>
+          <label for="alert2" class="btn btn-warning">Warning</label>
+        </div>
+        <div class="alert-wrap">
+          <app-success class="alerts alert1"></app-success>
+          <app-warning class="alerts alert2"></app-warning>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

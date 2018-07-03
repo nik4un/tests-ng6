@@ -1,0 +1,31 @@
+.wrapper > input {
+  display: none;
+}
+
+.wrapper .alert-wrap {
+  position: relative;
+  padding-top: 10px;
+}
+
+.wrapper label {
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+#alert1:checked ~ .controls label.btn-success {
+  background-color: #449d44;
+}
+#alert2:checked ~ .controls label.btn-warning {
+  background-color: #ec971f;
+}
+
+.alerts {
+  display: none;
+}
+
+#alert1:checked ~ .alert-wrap > .alert1,
+#alert2:checked ~ .alert-wrap > .alert2 {
+  display: block;
+}
+
