@@ -1,30 +1,26 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <ol>
-        <li>Create two new Components (manually or with CLI): WarningAlert and SuccessAlert</li>
-        <li>Output them beneath each other in the AppComponent</li>
-        <li>Output a warning or success message in the Components</li>
-        <li>Style the Components appropriately (maybe some red/ green text?)</li>
-      </ol>
-      <p>Use external or internal templates and styles!</p>
-      <p>Feel free to create more components, nest them into each other or play around with different types of
-        selectors!</p>
-      <hr>
-      <div class="wrapper">
-        <input type="radio" name="point" id="alert1">
-        <input type="radio" name="point" id="alert2">
-        <div class="controls">
-          <label for="alert1" class="btn btn-success">Success</label>
-          <label for="alert2" class="btn btn-warning">Warning</label>
-        </div>
-        <div class="alert-wrap">
-          <app-success class="alerts alert1"></app-success>
-          <app-warning class="alerts alert2"></app-warning>
-        </div>
-      </div>
+<ol>
+  <li>Add a Input field which updates a property ('username') via Two-Way-Binding</li>
+  <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
+  <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+  <li>Upon clicking the button, the username should be reset to an empty string</li>
+</ol>
+<hr>
+<div>
+  <div class="form-group row">
+    <label for="inputName1" class="col-sm-1 col-form-label offset">User name</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputName1" [(ngModel)]="userName">
     </div>
-
+  </div>
+  <p class="form-group row offset">{{ userName.trim() }}</p>
+  <div class="form-group row">
+    <div class="col-sm-1 offset">
+      <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!userName.trim().length"
+          (click)="onSubmit()"
+      >Clean up</button>
+    </div>
   </div>
 </div>
-
