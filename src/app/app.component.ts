@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  userName = '';
+  displayText = false;
+  num = 0;
+  logs = [];
 
-  onSubmit() {
-    this.userName = '';
+  onClick() {
+    this.displayText = !this.displayText;
+    this.num += 1;
+    this.logs.push(this.num);
   }
 
 }
